@@ -1,0 +1,173 @@
+{
+    "key": "group_5954f193f41c6",
+    "title": "Fontset",
+    "fields": [
+        {
+            "key": "field_5954f510a4f05",
+            "label": "Fontset Type",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Webservice = Load your fonts from an external service like fonts.com, TypeKit etc.\r\nSelf-hosted = Your fonts are stored on your webspace.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5954f1a4c13be",
+            "label": "Select Type",
+            "name": "fontset_type",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "webservice": "Webservice",
+                "selfhosted": "Self-hosted"
+            },
+            "default_value": [
+                "webservice"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5954f552a4f06",
+            "label": "Embed Code",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5954f1a4c13be",
+                        "operator": "==",
+                        "value": "webservice"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Please paste the embed code(s) from your font service(s) here. You can add multiple embed codes (Link, CSS and JS) from individual font services.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5954f25d76073",
+            "label": "Paste Code",
+            "name": "embed_code",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5954f1a4c13be",
+                        "operator": "==",
+                        "value": "webservice"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5954f59c087b3",
+            "label": "CSS Code",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5954f1a4c13be",
+                        "operator": "==",
+                        "value": "selfhosted"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Please paste your CSS code.\r\n\r\nExample:\r\n<pre style='overflow-x: auto; background-color: #eee; padding: 1em;'>\r\n@font-face {\r\n  font-family: 'Campton-ExtraLightItalic';\r\n  src: url('\/\/example.com\/fonts\/campton\/Campton-ExtraLightItalic.eot');\r\n  src: url('\/\/example.com\/fonts\/campton\/Campton-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),\r\n       url('\/\/example.com\/fonts\/campton\/Campton-ExtraLightItalic.woff2') format('woff2'),\r\n       url('\/\/example.com\/fonts\/campton\/Campton-ExtraLightItalic.woff') format('woff'),\r\n       url('\/\/example.com\/fonts\/campton\/Campton-ExtraLightItalic.ttf') format('truetype'),\r\n       url('\/\/example.com\/fonts\/campton\/Campton-ExtraLightItalic.svg#wf') format('svg');\r\n}\r\n<\/pre>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5954f5ca087b4",
+            "label": "Paste CSS",
+            "name": "css_code",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5954f1a4c13be",
+                        "operator": "==",
+                        "value": "selfhosted"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "wptb-fontset"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "private": true,
+    "modified": 1500464999
+}
